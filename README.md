@@ -1,39 +1,23 @@
 # Stock Price Prediction Script
 
 ## Overview
+This PowerShell script is designed to predict the next 3 values of stock prices from given CSV files containing time-series data. It processes multiple files from specified directories (or a single directory) and generates output files with predicted values.
 
-This PowerShell script processes stock price data from CSV files for multiple stock exchanges. It fetches 10 consecutive data points starting from a random timestamp and predicts the next 3 stock price values. The output is saved as new CSV files.
+### Features
+- Retrieves CSV files from the specified input directory/directories.
+- Predicts the next 3 values of stock prices using a simple algorithm.
+- Outputs the predictions in CSV format with required columns: Stock-ID, Timestamp, and Stock Price.
 
 ## Requirements
+- PowerShell (version 5.1 or later recommended)
+- CSV files containing stock data with columns: Stock-ID, Timestamp (dd-mm-yyyy), Stock Price.
 
-- PowerShell
-- Stock price data files in CSV format organized in folders by stock exchange
+## Usage
+1. **Clone the repository** or download the script file `techc.ps1` to your local machine.
 
-## Input Data Format
+2. **Open PowerShell**:
+   - Navigate to the directory where `techc.ps1` is located.
 
-Each CSV file should contain:
-- Stock-ID
-- Timestamp (dd-MM-yyyy)
-- Stock price value
-
-## Output Data Format
-
-Each output CSV file will have:
-- Stock-ID
-- Timestamp-n
-- Stock price n
-- Timestamp-n+1
-- Stock price n+1
-- Timestamp-n+2
-- Stock price n+2
-- Timestamp-n+3
-- Stock price n+3
-
-## How to Run
-
-1. Place the script in the root directory containing folders for each stock exchange.
-2. Ensure the CSV files are placed in their respective folders.
-3. Run the script with the number of files to process for each stock exchange as a parameter (default is 1).
-
-```powershell
-.\StockPricePrediction.ps1 -numFiles 2
+3. **Run the script** with the following parameters:
+   ```powershell
+   .\techc.ps1 -inputFolder "C:\path\to\input\folder" -numFilesToProcess 2 -outputFolder "C:\path\to\output\folder"
