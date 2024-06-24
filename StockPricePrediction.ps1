@@ -1,7 +1,7 @@
 param (
-    [string]$inputFolder = "C:\Users\dukumili\tech\stocks",
+    [string]$inputFolder,
     [int]$numFilesToProcess = 2,
-    [string]$outputFolder = "C:\Users\dukumili\tech\stocks\output"
+    [string]$outputFolder
 )
 
 # Function to generate 10 consecutive data points from a random timestamp
