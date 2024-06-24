@@ -13,11 +13,11 @@ This PowerShell script is designed to predict the next 3 values of stock prices 
 - CSV files containing stock data with columns: Stock-ID, Timestamp (dd-mm-yyyy), Stock Price.
 
 ## Usage
-1. **Clone the repository** or download the script file `techc.ps1` to your local machine.
+1. **Clone the repository** or download the script file `StockPricePrediction.ps1` to your local machine.
 
 2. **Open PowerShell**:
-   - Navigate to the directory where `techc.ps1` is located.
+   - Navigate to the directory where `StockPricePrediction.ps1` is located.
 
 3. **Run the script** with the following parameters:
    ```powershell
-   .\techc.ps1 -inputFolder "C:\path\to\input\folder" -numFilesToProcess 2 -outputFolder "C:\path\to\output\folder"
+   .\StockPricePrediction.ps1 -inputFolder "C:\path\to\input\folder" -numFilesToProcess 2 -outputFolder "C:\path\to\output\folder"
